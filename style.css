@@ -66,6 +66,14 @@ main {
     display: flex;
     justify-content: center;
     margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.rubrique.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .bubble {
