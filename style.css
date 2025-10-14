@@ -16,7 +16,7 @@ body {
 header {
     position: relative;
     height: 80vh;
-    background-image: url('header-voyage.jpg'); /* à remplacer */
+    background-image: url('header-voyage.jpg'); /* à remplacer par ta photo */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -115,7 +115,7 @@ main {
     transform: translateY(-3px);
 }
 
-/* Avis - ruban animé */
+/* Avis - ruban continu */
 .avis {
     background-color: rgba(216, 191, 170, 0.2);
     padding: 3rem 2rem;
@@ -136,6 +136,7 @@ main {
 .carousel-track {
     display: flex;
     gap: 2rem;
+    width: max-content;
     animation: scroll 20s linear infinite;
 }
 
@@ -147,7 +148,7 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Animation ruban */
+/* Animation ruban continu */
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
