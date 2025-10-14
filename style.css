@@ -113,8 +113,8 @@ header::after {
 .phone-bottom-image {
     position: absolute;
     bottom: 5px;
-    width: 45px;   /* taille augmentée */
-    height: 45px;
+    width: 80px;   /* taille augmentée */
+    height: 80px;
 }
 
 .phone-bottom-image img {
