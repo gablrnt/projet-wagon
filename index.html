@@ -9,7 +9,7 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <img src="header-voyage.jpg" alt="Voyage" class="header-image">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80" alt="Voyage" class="header-image">
         <div class="header-overlay">
             <h1>GoWhere</h1>
             <p class="slogan">Swipe. Découvre. Pars.</p>
@@ -18,25 +18,25 @@
 
     <!-- Rubriques -->
     <main>
-        <section class="rubrique">
+        <section class="rubrique animate">
             <div class="bubble">
-                <img src="presentation.jpg" alt="Présentation" class="rubrique-img">
+                <img src="https://images.unsplash.com/photo-1526779259212-6f9a923f77b2?auto=format&fit=crop&w=800&q=80" alt="Présentation" class="rubrique-img">
                 <h2>Présentation</h2>
                 <p>Choisir où partir n’a jamais été aussi simple. ✨ Notre application transforme la recherche de voyages en une expérience ludique et intuitive. Fini les longues heures à comparer des destinations : il vous suffit de swiper à gauche ou à droite selon vos envies, et l’application apprend à vous connaître pour vous proposer les endroits qui vous correspondent le mieux. 🌍</p>
             </div>
         </section>
 
-        <section class="rubrique">
+        <section class="rubrique animate">
             <div class="bubble">
-                <img src="comment-marche.jpg" alt="Comment ça marche" class="rubrique-img">
+                <img src="https://images.unsplash.com/photo-1526779259212-6f9a923f77b2?auto=format&fit=crop&w=800&q=80" alt="Comment ça marche" class="rubrique-img">
                 <h2>Comment ça marche</h2>
                 <p>Le fonctionnement est aussi simple qu’efficace. ✅ Créez votre profil voyageur, indiquez vos préférences, puis découvrez des destinations à swiper : gauche ❌, droite ✅. L’algorithme apprend de vos choix et affine ses suggestions pour vous offrir les destinations parfaites. 🧭</p>
             </div>
         </section>
 
-        <section class="rubrique">
+        <section class="rubrique animate">
             <div class="bubble">
-                <img src="categories.jpg" alt="Catégories" class="rubrique-img">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Catégories" class="rubrique-img">
                 <h2>Catégories</h2>
                 <ul>
                     <li>🌴 <strong>Aventure & Nature</strong> : explorez les paysages les plus époustouflants.</li>
@@ -48,17 +48,17 @@
             </div>
         </section>
 
-        <section class="rubrique">
+        <section class="rubrique animate">
             <div class="bubble">
-                <img src="pourquoi.jpg" alt="Pourquoi nous choisir" class="rubrique-img">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Pourquoi nous choisir" class="rubrique-img">
                 <h2>Pourquoi nous choisir</h2>
                 <p>Notre mission : personnaliser votre expérience de voyage comme jamais auparavant. 🌟 Grâce à une interface fluide et intuitive, découvrez des lieux uniques sans effort. L’application apprend de vos choix pour vous offrir des recommandations toujours plus précises et inspirantes. Vous gagnez du temps ⏱️ et redécouvrez le plaisir de choisir selon vos envies.</p>
             </div>
         </section>
 
-        <section class="rubrique">
+        <section class="rubrique animate">
             <div class="bubble">
-                <img src="rejoignez.jpg" alt="Rejoignez l'aventure" class="rubrique-img">
+                <img src="https://images.unsplash.com/photo-1526779259212-6f9a923f77b2?auto=format&fit=crop&w=800&q=80" alt="Rejoignez l'aventure" class="rubrique-img">
                 <h2>Rejoignez l’aventure</h2>
                 <p>Prêt à trouver votre prochaine destination ? 🚀 Téléchargez l’application dès maintenant et laissez vos envies tracer votre itinéraire. Que ce soit pour un week-end dépaysant ou un grand voyage, il vous suffit d’un swipe pour commencer à rêver. L’aventure n’attend plus que vous ! 🌏</p>
             </div>
@@ -92,5 +92,22 @@
     <footer>
         <p>&copy; 2025 GoWhere | Mentions légales | Contact</p>
     </footer>
+
+    <!-- Script pour animation scroll -->
+    <script>
+        const animItems = document.querySelectorAll('.animate');
+
+        function animateOnScroll() {
+            animItems.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if(rect.top < window.innerHeight - 100) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
 </body>
 </html>
