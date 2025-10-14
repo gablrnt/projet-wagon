@@ -20,15 +20,15 @@
     <!-- Téléphone avec images swipe -->
     <div class="phone-container">
         <div class="phone">
-            <!-- Image fixe en haut -->
-            <div class="phone-top-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhrV-BLLDHI24VUa9dgTe7EDAwQ2aeMOjvvg&s" alt="Mini décoratif">
-            </div>
             <!-- Images paysage swipe -->
             <div class="screen">
                 <img class="swipe-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Plage">
                 <img class="swipe-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Montagne">
                 <img class="swipe-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Ville">
+            </div>
+            <!-- Image fixe en bas -->
+            <div class="phone-bottom-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhrV-BLLDHI24VUa9dgTe7EDAwQ2aeMOjvvg&s" alt="Mini décoratif">
             </div>
         </div>
     </div>
@@ -90,10 +90,6 @@
                     <div class="avis-item">“Enfin une appli qui comprend mes envies de voyage ! 🌴🏙️”</div>
                     <div class="avis-item">“J’adore swiper et découvrir de nouvelles destinations chaque semaine ! ✈️”</div>
                     <div class="avis-item">“Swipez, découvrez et partez facilement grâce à GoWhere ! 🌏”</div>
-                    <div class="avis-item">“GoWhere a transformé ma façon de voyager, tellement intuitif ! ⭐⭐⭐⭐⭐”</div>
-                    <div class="avis-item">“Enfin une appli qui comprend mes envies de voyage ! 🌴🏙️”</div>
-                    <div class="avis-item">“J’adore swiper et découvrir de nouvelles destinations chaque semaine ! ✈️”</div>
-                    <div class="avis-item">“Swipez, découvrez et partez facilement grâce à GoWhere ! 🌏”</div>
                 </div>
             </div>
         </section>
@@ -111,14 +107,11 @@
 
         function animateOnScroll() {
             const scrollTop = window.scrollY;
-
             animItems.forEach(item => {
                 const rect = item.getBoundingClientRect();
                 if(rect.top < window.innerHeight - 100) item.classList.add('visible');
             });
-
             if(headerImage) headerImage.style.transform = `translateY(${scrollTop * 0.3}px)`;
-
             parallaxBubbles.forEach(bubble => {
                 const rect = bubble.getBoundingClientRect();
                 const bubbleOffset = (rect.top - window.innerHeight / 2) * 0.05;
@@ -129,5 +122,6 @@
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
     </script>
+
 </body>
 </html>
