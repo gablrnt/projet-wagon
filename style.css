@@ -57,12 +57,11 @@ header::after {
     font-size: 1.5rem;
 }
 
-/* Phone swipe */
+/* Phone */
 .phone-container {
     display: flex;
     justify-content: center;
     margin: 3rem 0;
-    position: relative;
 }
 
 .phone {
@@ -79,21 +78,10 @@ header::after {
     align-items: center;
 }
 
-.phone-top-image {
-    width: 100%;
-    height: 80px;
-    flex-shrink: 0;
-}
-
-.phone-top-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* Swipe paysage */
 .screen {
     width: 100%;
-    height: calc(100% - 80px);
+    height: 100%;
     display: flex;
     animation: swipe-horizontal 6s linear infinite;
 }
@@ -102,12 +90,24 @@ header::after {
     min-width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0;
 }
 
 @keyframes swipe-horizontal {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-200%); }
+}
+
+/* Image mini décoratif en bas */
+.phone-bottom-image {
+    position: absolute;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.phone-bottom-image img {
+    width: 100%;
+    height: auto;
 }
 
 /* Rubriques */
@@ -178,13 +178,12 @@ main {
     transform: translateY(-3px);
 }
 
-/* Avis - ruban continu */
+/* Avis */
 .avis {
     background-color: rgba(216, 191, 170, 0.2);
     padding: 3rem 2rem;
     text-align: center;
     overflow: hidden;
-    position: relative;
 }
 
 .avis h3 {
