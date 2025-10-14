@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* HERO */
+.hero {
+  background: url("https://images.unsplash.com/photo-1493558103817-58b2924bce98") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* SECTIONS */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 50px;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section img {
+  width: 45%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.section .text {
+  width: 50%;
+}
+
+.section .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section .text p {
+  margin-bottom: 1rem;
+}
+
+.section .text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section .text li {
+  margin-bottom: 0.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #0078ff;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #005fcc;
+}
+
+/* RUBAN AVIS */
+.reviews-container {
+  overflow: hidden;
+  background-color: #f7f7f7;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.reviews {
+  display: flex;
+  gap: 50px;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.review {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 10%;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #66aaff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section img, .section .text {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+}
