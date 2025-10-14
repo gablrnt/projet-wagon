@@ -69,15 +69,12 @@ main {
 }
 
 .bubble {
-    background-color: rgba(255,255,255,0.9);
+    background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     padding: 2rem;
     max-width: 700px;
     text-align: center;
-    background-size: cover;
-    background-position: center;
-    color: #333;
 }
 
 .bubble h2 {
