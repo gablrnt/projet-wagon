@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #F5F2EB; /* blanc cassé / sable */
+    background-color: #F5F2EB;
     color: #333;
     line-height: 1.6;
 }
@@ -16,7 +16,7 @@ body {
 header {
     position: relative;
     height: 80vh;
-    background-image: url('header-voyage.jpg'); /* Remplacer par ton image */
+    background-image: url('header-voyage.jpg'); /* à remplacer */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -27,11 +27,8 @@ header {
 header::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4); /* overlay sombre pour lisibilité */
+    inset: 0;
+    background-color: rgba(0,0,0,0.3);
 }
 
 .header-overlay {
@@ -60,23 +57,17 @@ main {
     margin-bottom: 4rem;
     text-align: center;
     padding: 2rem;
-    position: relative;
-    overflow: hidden;
 }
 
-.rubrique .numero {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 3rem;
+.bubble {
+    display: inline-block;
+    background-color: #D8BFAA;
     color: #fff;
-    background-color: #D8BFAA; /* sable */
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -93,10 +84,8 @@ main {
 
 .rubrique ul {
     list-style: none;
-    margin-top: 1rem;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto 0 auto;
     padding: 0;
 }
 
@@ -126,11 +115,13 @@ main {
     transform: translateY(-3px);
 }
 
-/* Avis */
+/* Avis - ruban animé */
 .avis {
     background-color: rgba(216, 191, 170, 0.2);
     padding: 3rem 2rem;
     text-align: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .avis h3 {
@@ -138,11 +129,14 @@ main {
 }
 
 .carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
     display: flex;
     gap: 2rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
+    animation: scroll 20s linear infinite;
 }
 
 .avis-item {
@@ -151,8 +145,12 @@ main {
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    scroll-snap-align: start;
-    min-width: 300px;
+}
+
+/* Animation ruban */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Footer */
