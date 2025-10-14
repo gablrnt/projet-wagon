@@ -59,7 +59,7 @@ header::after {
     font-size: 1.5rem;
 }
 
-/* Phone swipe avec rotation */
+/* Phone swipe avec image décorative dessous */
 .phone-container {
     display: flex;
     justify-content: center;
@@ -76,14 +76,18 @@ header::after {
     overflow: hidden;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px; /* espace pour image miniature en bas */
 }
 
 .screen {
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: row;
-    animation: swipe-rotate 6s infinite;
+    animation: swipe-rotate 6s infinite linear;
 }
 
 .swipe-card {
@@ -100,23 +104,25 @@ header::after {
     border-radius: 15px;
 }
 
+/* Animation swipe horizontal avec rotation */
 @keyframes swipe-rotate {
-    0%, 20% { transform: translateX(0%) rotate(0deg); }
-    25%, 45% { transform: translateX(-100%) rotate(-3deg); }
-    50%, 70% { transform: translateX(-200%) rotate(3deg); }
-    75%, 95% { transform: translateX(-300%) rotate(-2deg); }
-    100% { transform: translateX(0%) rotate(0deg); }
+    0%, 20% { transform: translateX(100%) rotate(0deg); }
+    25%, 45% { transform: translateX(0%) rotate(-3deg); }
+    50%, 70% { transform: translateX(-100%) rotate(3deg); }
+    75%, 95% { transform: translateX(-200%) rotate(-2deg); }
+    100% { transform: translateX(100%) rotate(0deg); }
 }
 
-/* Image décorative sous téléphone */
+/* Image miniature décorative en bas du téléphone */
 .phone-bottom-image {
-    display: flex;
-    justify-content: center;
-    margin-top: -50px;
+    position: absolute;
+    bottom: 5px;
+    width: 50px;
+    height: 50px;
 }
 
 .phone-bottom-image img {
-    width: 150px;
+    width: 100%;
     height: auto;
 }
 
